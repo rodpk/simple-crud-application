@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
+
 <body>
 
-    <div class="form">
+    <div class="form-container">
+        <h1>Simple Form Application</h1>
+
         <form>
             <label for="name">NAME </label>
-            <input type="text" name="name" id="name_id">
-            <label for="age">AGE </label>
-            <input type="number" name="age" id="age_id">
+            <input type="text" name="name" id="name_id", placeholder="Your name...">
+
+            <label for="name">EMAIL </label>
+            <input type="email" name="email" id="email_id", placeholder="Your e-mail...">
+
+
+            <label for="age">CELLPHONE </label>
+            <input type="text" name="age" id="age_id" class="form-control" placeholder= "(00) 00000-0000"onkeypress="$(this).mask('(00) 00000-0009')">
+
             <label for="cpf">CPF </label>
-            <input type="text" name="cpf" id="cpf_id">
+            <input type="text" name="cpf" id="cpf_id" placeholder="Your cpf..." class="form-control" onkeypress="$(this).mask('000.000.000-00');">
+            
             <label for="birth_date">BIRTH DATE </label>
             <input type="date" name="birthdate" id="birthdate_id">
-            <button type='button'  onclick='send()'>submit</button> 
+
+            <label for="your_opinion">OPINION</label>
+            <textarea name="your_opinion" id="your_opinion_id" cols="65" rows="5"></textarea>
+
+
+            <button type='button' onclick='send()'>submit</button>
         </form>
 
     </div>
 </body>
+
 </html>
