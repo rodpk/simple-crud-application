@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  gamelist-db:
+    image: postgres:11
+    container_name: simple-crud-db
+    restart: always
+    environment:
+      - POSTGRES_DB=simple-crud-db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin123
+    ports:
+      - 5436:5432

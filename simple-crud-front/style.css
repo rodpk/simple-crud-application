@@ -1,0 +1,41 @@
+body {
+    background-color: #e2e2e2;
+}
+
+
+.form {
+    border-radius: 5px;
+    padding: 50px;
+    background-color: white;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px ;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+
+button{
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 5px 2px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 5px 2px;
+    cursor: pointer;
+}
