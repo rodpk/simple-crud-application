@@ -7,9 +7,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public record PersonRequest (
     String name,
     String cpf,
+    String cellphone,
+    String email,
     @JsonProperty("birth_date")
     LocalDate birthDate,
-    int age
+    String opinion
 ) {
     
 }

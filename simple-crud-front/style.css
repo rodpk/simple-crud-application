@@ -23,6 +23,18 @@ form {
     margin-bottom: 2rem;
 }
 
+a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #23c483;
+}
+
+a:hover {
+    font-weight: bolder;
+    color: #477c67;
+
+}
+
 
 
 .form-container{

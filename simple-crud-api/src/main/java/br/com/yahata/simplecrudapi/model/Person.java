@@ -29,7 +29,10 @@ public class Person {
     private String name;
     
     @Column(name = "age")
-    private int age;
+    private String cellphone;
+
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "cpf", nullable = false, unique = true)
     private String cpf;
@@ -37,13 +40,18 @@ public class Person {
     @Column(name = "birth_date", columnDefinition = "DATE")
     private LocalDate birth;
 
+    @Column(name = "opinion")
+    private String opinion;
+
 
     public static Person of(PersonRequest request) {
         var person = new Person();
         person.setName(request.name());
-        person.setAge(request.age());
+        person.setCellphone(request.cellphone());
         person.setCpf(request.cpf());
         person.setBirth(request.birthDate());
+        person.setOpinion(request.opinion());
+        person.setEmail(request.email());
         return person;
     }
 }
